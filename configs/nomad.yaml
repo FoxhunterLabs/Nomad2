@@ -1,0 +1,7 @@
+nomad:
+  host: "0.0.0.0"
+  port: 8080
+  mode: "shadow"        # shadow | training | live
+  data_dir: "runs"
+  policy_file: "configs/policies/urban_demo_v2.yaml"
+  max_tick_ns: 50000000 # 50ms max per tick
