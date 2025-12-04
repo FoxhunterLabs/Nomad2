@@ -1,0 +1,30 @@
+metadata:
+  id: "urban_demo_v2"
+  version: "2.0.0"
+  author: "Nomad 2"
+  created_at: "2025-12-04T00:00:00Z"
+  scope: "simulation"
+  mode_allow: ["shadow", "training", "live"]
+
+signing:
+  algo: "none"          # placeholder for real signing
+  signature: null
+
+envelope:
+  # Global safety guardrails for LIVE
+  stability_min_live: 50
+  drift_max_live: 60
+
+actions:
+  stop_safe:
+    drift_max: 80
+    stability_min: 35
+  cautious:
+    drift_max: 40
+    stability_min: 65
+  normal:
+    drift_max: 20
+    stability_min: 80
+
+escalation:
+  require_dual_approval: []
